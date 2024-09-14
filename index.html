@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tour of dom</title>
+    
+    <link rel="stylesheet" href="styles/styles.css">
+    <style>
+        .fruits li{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <main id="container">
+        <head>
+            <h1>This is dom</h1>
+        </head>
+        <body>
+            <section>
+                 <p id="para">hi mi ni ki</p>
+            <ul>
+                <li class="list">dom de baba dom de</li>
+                <li class="list">jalali dom</li>
+                <li class="list">shafayat</li>
+            </ul>
+            </section>
+           
+            <section class="fruits">
+                <ul>
+                    <li>mango</li>
+                    <li>lichi</li>
+                    <li>banana</li>
+                </ul>
+            </section>
+        </body>
+    </main>
+    <script src="js/append.js"></script>
+    <script src="js/dom.js"></script>
+    <script>
+        const licolection=document.getElementsByTagName('li')
+        //console.log(licolection);
+        for(const li of licolection){
+            console.log(li.innerText);
+        }
+        const clas=document.getElementsByClassName('list')
+        console.log(clas);
+
+        const fruits=document.querySelectorAll('.fruits li')
+        console.log(fruits);
+    </script>
+</body>
+</html>
